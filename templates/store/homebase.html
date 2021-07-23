@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>SHOPX.com ONLINE STORE</title>
+
+</head>
+
+<body>
+  {%if request.user.is_authenticated%}
+    {% include "store/customer_navbar.html" %}
+  {%else%}
+    {% include "store/navbar.html" %}
+  {%endif%}
+
+
+  {%block content%}
+
+  {%endblock content%}
+
+
+  {% include "store/footer.html" %}
+</body>
+</html>
